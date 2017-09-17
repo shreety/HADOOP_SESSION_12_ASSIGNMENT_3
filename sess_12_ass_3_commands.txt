@@ -1,0 +1,15 @@
+
+1. b.filter(s=> (s._2.length() == 4))
+
+
+2. val list_with_m = b.filter(s => (s._2.contains("m")))
+list_with_m: List[(Int, String)] = List((3,gamma), (5,omega))
+
+val list_with_z = b.filter(s => (s._2.contains("z")))
+list_with_z: List[(Int, String)] = List((4,zeta))
+
+val list_concat = list_with_m ::: list_with_z
+list_concat: List[(Int, String)] = List((3,gamma), (5,omega), (4,zeta))
+                                                                   ^
+val average= list_concat.map(_._1).sum / list_concat.length
+average: Int = 4
